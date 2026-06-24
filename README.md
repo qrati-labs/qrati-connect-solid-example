@@ -1,28 +1,47 @@
-## Usage
+# Qrati Connect — Solid Example
 
-```bash
-$ npm install # or pnpm install or yarn install
+Embeds [Qrati Connect](https://qrati.com) into a Solid + Vite app using the
+framework-agnostic **web component** integration, with a host-controlled
+light/dark theme and a demo login for organizations that use custom auth.
+
+## Integration method: Web component
+
+Solid renders custom elements natively, so we load the element bundle from the
+CDN and drop `<qrati-connect>` into the markup:
+
+```jsx
+<qrati-connect organization-id={ORGANIZATION_ID} uid={user.userId} theme={theme} router="hash" />
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+The bundle (and its styles) are loaded once on mount — see `src/App.solid`.
 
-## Available Scripts
+## Run it
 
-In the project directory, you can run:
+```bash
+bun install
+cp .env.example .env   # optional — sensible defaults are baked in
+bun dev
+```
 
-### `npm run dev`
+## Configuration
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Set these in `.env` (all optional; the demo org is used as a fallback):
 
-### `npm run build`
+| Variable                 | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| `VITE_ORGANIZATION_ID`   | Your Qrati organization ID                                        |
+| `VITE_QRATI_SCRIPT_URL`  | CDN URL of the web-component bundle (`element/web.es.js`)          |
+| `VITE_API_ENDPOINT`      | Demo-login endpoint for custom-auth orgs. Leave empty to skip it. |
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+## Demo auth
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Orgs with custom auth expect a known user. The login form (`src/auth.ts`) derives
+a stable `uid` from the email, optionally POSTs to `VITE_API_ENDPOINT`, then
+renders the widget with `uid` / `fname` / `lname` so the user is recognized.
 
-## Deployment
+## Other integration methods
 
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+- **React component** — `import { QratiConnect }` (see the React/Next/Preact examples).
+- **Embed (no-code)** — single `<script>` tag with `data-*` attributes (see the Vanilla JS / Marko / Ember examples).
+
+Docs: <https://www.npmjs.com/package/@qratilabs/qrati-connect>
