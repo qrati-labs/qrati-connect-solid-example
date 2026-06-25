@@ -3,7 +3,7 @@ export const ORGANIZATION_ID =
   import.meta.env.VITE_ORGANIZATION_ID || '69ad9c7876d8bf6f864b3a65';
 
 export const QRATI_SCRIPT_URL =
-  import.meta.env.VITE_QRATI_SCRIPT_URL ||
+  import.meta.env.VITE_CDN_URL ||
   'https://cdn.jsdelivr.net/npm/@qratilabs/qrati-connect/element/web.es.js';
 
 // Demo-login endpoint that maps an email to a uid against the org's custom auth settings.

@@ -30,7 +30,7 @@ Set these in `.env` (all optional; the demo org is used as a fallback):
 | Variable                 | Description                                                       |
 | ------------------------ | ----------------------------------------------------------------- |
 | `VITE_ORGANIZATION_ID`   | Your Qrati organization ID                                        |
-| `VITE_QRATI_SCRIPT_URL`  | CDN URL of the web-component bundle (`element/web.es.js`)          |
+| `VITE_CDN_URL`  | CDN URL of the web-component bundle (`element/web.es.js`)          |
 | `VITE_API_ENDPOINT`      | Demo-login endpoint for custom-auth orgs. Leave empty to skip it. |
 
 ## Demo auth
