@@ -1,13 +1,268 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qrati Connect — Solid Example</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
-  </body>
+    <head>
+        <!-- %GTM_HEAD% -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- Primary SEO Meta Tags -->
+        <title>Embeddable Event Photo Gallery Solid Component | Qrati Connect</title>
+        <meta
+            name="title"
+            content="Embeddable Event Photo Gallery Solid Component | Qrati Connect"
+        />
+        <meta
+            name="description"
+            content="Embed a live, interactive event photo gallery in Solid using the framework-agnostic web component with guest uploads, lightbox, emoji reactions, and contest leaderboards."
+        />
+        <meta
+            name="keywords"
+            content="embeddable event photo gallery, solid photo gallery component, solidjs web component, live event photo wall, guest photo uploads, solid ugc gallery, event photo sharing widget, photo contest leaderboard, qrati connect solid, @qratilabs/qrati-connect"
+        />
+        <meta name="author" content="Qrati Labs" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+            name="googlebot"
+            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <link rel="canonical" href="https://qrati.com/connect/solid-example" />
+
+        <!-- Theme & App Meta -->
+        <meta name="theme-color" content="#ff4800" />
+        <meta name="msapplication-TileColor" content="#ff4800" />
+        <meta name="application-name" content="Qrati Connect Solid" />
+        <meta name="apple-mobile-web-app-title" content="Qrati Connect" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- Favicons & App Icons -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/qrati-connect-logo-square.png" />
+        <link rel="apple-touch-icon" href="/qrati-connect-logo-square.png" />
+
+        <!-- Preconnect & Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Sora:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="dns-prefetch" href="https://assets.qrati.com" />
+        <link rel="dns-prefetch" href="https://api.qrati.com" />
+
+        <!-- Open Graph / Facebook / LinkedIn / Slack -->
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Qrati Connect" />
+        <meta property="og:url" content="https://qrati.com/connect/solid-example" />
+        <meta
+            property="og:title"
+            content="Embeddable Event Photo Gallery Solid Component | Qrati Connect"
+        />
+        <meta
+            property="og:description"
+            content="Embed a live, interactive event photo gallery in Solid using the framework-agnostic web component with guest uploads, lightbox, emoji reactions, and contest leaderboards."
+        />
+        <meta
+            property="og:image"
+            content="https://qrati.com/connect/solid-example/qrati-connect-og.png"
+        />
+        <meta
+            property="og:image:secure_url"
+            content="https://qrati.com/connect/solid-example/qrati-connect-og.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+            property="og:image:alt"
+            content="Qrati Connect Solid Web Component — Live Event Photo Gallery Embed"
+        />
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@qratilabs" />
+        <meta name="twitter:creator" content="@qratilabs" />
+        <meta
+            name="twitter:title"
+            content="Embeddable Event Photo Gallery Solid Component | Qrati Connect"
+        />
+        <meta
+            name="twitter:description"
+            content="Embed a live, interactive event photo gallery in Solid using the framework-agnostic web component with guest uploads, lightbox, emoji reactions, and contest leaderboards."
+        />
+        <meta
+            name="twitter:image"
+            content="https://qrati.com/connect/solid-example/qrati-connect-og.png"
+        />
+        <meta
+            name="twitter:image:alt"
+            content="Qrati Connect Solid Component Preview"
+        />
+
+        <!-- Structured Data / JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://qrati.com/#organization",
+                    "name": "Qrati Labs, LLC",
+                    "url": "https://qrati.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://qrati.com/connect/solid-example/qrati-connect-logo-square.png",
+                        "width": 128,
+                        "height": 128
+                    },
+                    "sameAs": [
+                        "https://github.com/qrati-labs",
+                        "https://www.linkedin.com/company/qrati"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://qrati.com/#website",
+                    "url": "https://qrati.com/",
+                    "name": "Qrati",
+                    "publisher": { "@id": "https://qrati.com/#organization" }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://qrati.com/connect/solid-example#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://qrati.com/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Connect",
+                            "item": "https://qrati.com/connect"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Solid Example",
+                            "item": "https://qrati.com/connect/solid-example"
+                        }
+                    ]
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://qrati.com/connect/solid-example#webpage",
+                    "url": "https://qrati.com/connect/solid-example",
+                    "name": "Embeddable Event Photo Gallery Solid Component | Qrati Connect",
+                    "description": "Embed a live, interactive event photo gallery in Solid using the framework-agnostic web component with guest uploads, lightbox, emoji reactions, and contest leaderboards.",
+                    "isPartOf": { "@id": "https://qrati.com/#website" },
+                    "breadcrumb": { "@id": "https://qrati.com/connect/solid-example#breadcrumb" },
+                    "about": { "@id": "https://qrati.com/connect/solid-example#software" },
+                    "primaryImageOfPage": {
+                        "@type": "ImageObject",
+                        "url": "https://qrati.com/connect/solid-example/qrati-connect-og.png",
+                        "width": 1200,
+                        "height": 630
+                    },
+                    "inLanguage": "en"
+                },
+                {
+                    "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+                    "@id": "https://qrati.com/connect/solid-example#software",
+                    "name": "Qrati Connect Solid Web Component",
+                    "applicationCategory": "DeveloperApplication",
+                    "operatingSystem": "Web",
+                    "programmingLanguage": "TypeScript",
+                    "runtimePlatform": "Solid 1.9, Web Components",
+                    "codeRepository": "https://github.com/qrati-labs/qrati-connect-solid-example",
+                    "downloadUrl": "https://www.npmjs.com/package/@qratilabs/qrati-connect",
+                    "url": "https://qrati.com/connect/solid-example",
+                    "description": "A drop-in web component for embedding live event photo galleries into Solid apps with fine-grained reactivity, guest media uploads, emoji reactions, and contest leaderboards.",
+                    "publisher": { "@id": "https://qrati.com/#organization" },
+                    "featureList": [
+                        "Drop-in Solid web component integration",
+                        "Direct guest photo and video uploads",
+                        "Client-side image compression and HEIC conversion",
+                        "Full-screen responsive lightbox",
+                        "Emoji reactions with real-time feedback",
+                        "Contest leaderboards and star ratings",
+                        "Fine-grained reactive theme synchronization (light/dark)",
+                        "TypeScript definitions and reactive attribute bindings"
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://qrati.com/connect/solid-example#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "How do I embed an event photo gallery in Solid?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Solid renders custom elements natively. Load the Qrati Connect element bundle from CDN or the @qratilabs/qrati-connect package, and render <qrati-connect organization-id=\"YOUR_ORG_ID\" theme={theme()} router=\"hash\" /> inside your Solid component."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can event attendees upload photos directly through the Solid gallery?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. When media uploads are enabled in your Qrati organization settings, attendees can upload photos and videos directly from mobile or desktop with automatic client-side compression and HEIC conversion."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How does Solid handle web component attribute reactivity with Qrati Connect?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Solid's fine-grained reactivity tracks signals like theme() and updates the custom element attributes directly with zero virtual DOM overhead and instantaneous re-renders."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Does the Qrati Connect web component support dark mode?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. The custom element accepts a theme attribute ('light' or 'dark'), enabling seamless synchronization with your Solid app's theme signal and system color scheme."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can I run photo contests and display rankings in the Solid gallery?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Qrati Connect supports contest mode, star ratings, emoji reactions, and ranked leaderboards configured directly from your Qrati organization dashboard."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
+
+        <!-- Pre-hydration Theme Initialization to prevent flash -->
+        <script>
+            (function() {
+                try {
+                    var t = localStorage.getItem('qc-theme') ||
+                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                    document.documentElement.setAttribute('data-theme', t);
+                } catch (e) {}
+            })();
+        </script>
+    </head>
+    <body>
+        <!-- %GTM_BODY% -->
+        <div id="root"></div>
+        <script type="module" src="/src/index.tsx"></script>
+    </body>
 </html>
