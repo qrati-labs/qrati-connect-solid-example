@@ -339,15 +339,11 @@ export function EventGallery() {
 
           <footer class="footer">
             <div class="footer-brand">
-              <div class="footer-logo-badge">
-                <img
-                  src="/qrati-connect-logo-square.png"
-                  alt="Qrati Connect logo"
-                  referrerpolicy="no-referrer"
-                  width="38"
-                  height="38"
-                />
-              </div>
+              <img
+                src="https://assets.qrati.com/images/qrati-connect-logo-square.png"
+                alt="Qrati Connect logo"
+                referrerpolicy="no-referrer"
+              />
               <div>
                 <span class="footer-title"><span>Qrati</span> Connect</span>
                 <p>Elevate your event experience.</p>
@@ -362,6 +358,7 @@ export function EventGallery() {
                 <button
                   type="button"
                   class="footer-cookie-btn"
+                  data-cc="show-preferencesModal"
                   onClick={() => showCookiePreferences()}
                 >
                   Cookie Preferences
