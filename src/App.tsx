@@ -32,6 +32,7 @@ function initTheme(): 'light' | 'dark' {
     (localStorage.getItem('qc-theme') as 'light' | 'dark') ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', t);
+  document.documentElement.classList.toggle('dark', t === 'dark');
   return t;
 }
 
@@ -41,6 +42,7 @@ export default function App() {
   const applyTheme = (t: 'light' | 'dark') => {
     setTheme(t);
     document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.classList.toggle('dark', t === 'dark');
     localStorage.setItem('qc-theme', t);
   };
 

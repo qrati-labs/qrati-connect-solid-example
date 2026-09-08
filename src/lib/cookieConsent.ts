@@ -201,7 +201,7 @@ export async function ensureCookieConsentInitialized(requiredParam?: boolean): P
                   {
                     title: 'Strictly necessary cookies',
                     description:
-                      'These cookies are essential for the proper functioning of Qrati, such as keeping you authenticated and maintaining security. They cannot be disabled.',
+                      'These cookies are essential for the proper functioning of Qrati and cannot be disabled.',
                     linkedCategory: 'necessary',
                   },
                   {
