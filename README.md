@@ -1,5 +1,9 @@
 # Qrati Connect — Solid Example
 
+[![Qrati Connect — embeddable event photo galleries](public/qrati-connect-og.png)](https://qrati.com/connect)
+
+Embed a fast, interactive event photo gallery in Solid with guest uploads, full-screen lightbox, emoji reactions, and photo-contest leaderboards. [Explore Qrati Connect](https://qrati.com/connect) or [view the live Solid example](https://qrati.com/connect/solid-example).
+
 Embeds [Qrati Connect](https://qrati.com) into a Solid + Vite application using the
 framework-agnostic **web component** (`<qrati-connect>`), with host-controlled
 light/dark theme synchronization, full SEO optimization, and zero backend configuration.
