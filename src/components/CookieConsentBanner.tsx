@@ -1,8 +1,9 @@
 import { onMount } from 'solid-js';
-import { checkConsentRequired, ensureCookieConsentInitialized } from '../lib/cookieConsent';
+import { checkConsentRequired, ensureCookieConsentInitialized, initGtm } from '../lib/cookieConsent';
 
 export default function CookieConsentBanner() {
   onMount(async () => {
+    initGtm();
     try {
       const required = await checkConsentRequired();
       if (required) {

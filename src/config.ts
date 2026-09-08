@@ -1,6 +1,6 @@
 // Falls back to the public demo org if no env is set, so the example runs out of the box.
 export const ORGANIZATION_ID =
-  import.meta.env.VITE_ORGANIZATION_ID || '69ad9c7876d8bf6f864b3a65';
+  import.meta.env.VITE_ORGANIZATION_ID || '';
 
 export const QRATI_SCRIPT_URL =
   import.meta.env.VITE_CDN_URL ||
