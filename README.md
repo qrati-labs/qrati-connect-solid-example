@@ -58,16 +58,6 @@ cp .env.example .env   # optional — sensible defaults are baked in
 pnpm dev
 ```
 
-## Configuration
-
-Set these in `.env` (all optional; the demo organization is used as a fallback):
-
-| Variable               | Description                                                        |
-| ---------------------- | ------------------------------------------------------------------ |
-| `VITE_ORGANIZATION_ID` | Your Qrati organization ID (defaults to public demo org)           |
-| `VITE_CDN_URL`         | CDN URL of the web-component bundle (`element/web.es.js`)          |
-| `VITE_GTM_ID`          | Optional Google Tag Manager container ID                           |
-
 ## Build & Deploy
 
 ```bash
