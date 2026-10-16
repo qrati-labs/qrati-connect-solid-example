@@ -42,11 +42,11 @@ Google's Consent Mode guidance says an unscoped default applies to visitors not 
 - `pnpm --version`: failed; executable unavailable. `node_modules` absent.
 - Automated tests/build/lint/typecheck: not run (blocked by unavailable package manager/dependencies and no test harness).
 - Code changes: report and tracker only; no production code/tests.
-- `git diff --check`: to be verified before PR.
+- `git diff --check`: passed before publication and again on the final docs-only update.
 
 ## PR state
 
-Report-only PR URL and head/check state will be recorded after publication; never merge or deploy.
+[PR #2](https://github.com/qrati-labs/qrati-connect-solid-example/pull/2) is open; GitGuardian passed and no other checks were reported at readback. Not merged or deployed.
 
 ## Sources
 
